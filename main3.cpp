@@ -13,39 +13,27 @@ using namespace std;
 
 int main() {
 
-	string name = "(Kristian)";
+	string name = "(Kristian)I shouldn't be caught by the stack";
+	string holder;
+	Stack* stack = new Stack();
 
-	for (int i = 0 ; i < name.size() ; i++) {
-		cout << name[i] << endl;
+	for (int i = 0 ; i <= name.size() ; i++) {
 		if (name[i] == '(') {
-			Element* pieceHolder = new Element(name[i]);
-			for (int j = (1+i); j < name.size() ; j++) {
-				Element* pieceHolder = new Element(name[j]);
+			for (int j = i; j < name.size() ; j++) {
+				holder = name[j];
+				cout << name[j] << endl;
+				Element* pieceHolder = new Element(holder);
+				stack->push(pieceHolder);
 				if (name[j] == ')') {
-					Stack* stack = new Stack();
-					for (int j = i; j < name.size() ; j++) {
-						stack->push(pieceHolder);
-						if (name[j] == ')') {
-							Element* k = stack->pop();
-							while(k != NULL)
-								{
-									cout << k -> getName() << endl;
-									k = stack->pop();
-								}
-						}
+					Element* k = stack->pop();
+					while(k != NULL) {
+						cout << k -> getName() << endl;
+						k = stack->pop();
 					}
-				}
-				else {
-					cout << "Please Enter a proper arithmetic expression" << endl;
-					return 1;
+					cout << "I've Finished Successfully, Now Shutting Down!";
+					return 0;
 				}
 			}
 		}
-		if (name[i] == ')') {
-			//If it sees this first then there is an obvious issue with a missing ')'
-			cout << "Please Enter a proper arithmetic expression" << endl;
-			return 1;
-		}
 	}
-
 }
