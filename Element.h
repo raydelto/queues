@@ -1,9 +1,10 @@
 //============================================================================
-// Name        : main2.cpp
+// Name        : main3.cpp
 // Author      : Kristian
 // Version     :
 // Copyright   : Copyright-Jan-7-2016
 // Description : Hello World in C++, Ansi-style
+//============================================================================
 
 #ifndef ELEMENT_H_
 #define ELEMENT_H_

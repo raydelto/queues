@@ -1,5 +1,5 @@
 //============================================================================
-// Name        : main2.cpp
+// Name        : main3.cpp
 // Author      : Kristian
 // Version     :
 // Copyright   : Copyright-Jan-7-2016
