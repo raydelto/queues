@@ -1,9 +1,9 @@
-/*
- * Element.h
- *
- *  Created on: Jan 6, 2016
- *      Author: raydelto
- */
+//============================================================================
+// Name        : main2.cpp
+// Author      : Kristian
+// Version     :
+// Copyright   : Copyright-Jan-7-2016
+// Description : Hello World in C++, Ansi-style
 
 #ifndef ELEMENT_H_
 #define ELEMENT_H_
@@ -19,7 +19,7 @@ public:
 	Element(std::string name);
 	virtual ~Element();
     std::string getName();
-	friend class Queue;
+	friend class Stack;
 };
 
 #endif /* ELEMENT_H_ */
