@@ -6,21 +6,20 @@
 // Description : Hello World in C++, Ansi-style
 //============================================================================
 
-#ifndef ELEMENT_H_
-#define ELEMENT_H_
-#include <string>
-using namespace std;
-class Element
+#ifndef STACK_H_
+#define STACK_H_
+#include "Element.h"
+class Stack
 {
 private:
-	std::string _name;
-	Element* _next;
+	Element* _first;
+
 
 public:
-	Element(std::string name);
-	virtual ~Element();
-    std::string getName();
-	friend class Stack;
+	void push(Element* element);
+	Element* pop();
+	Stack();
+	virtual ~Stack();
 };
 
-#endif /* ELEMENT_H_ */
+#endif /* STACK_H_ */

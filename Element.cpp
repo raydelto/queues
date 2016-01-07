@@ -1,9 +1,10 @@
-/*
- * Element.cpp
- *
- *  Created on: Jan 6, 2016
- *      Author: raydelto
- */
+//============================================================================
+// Name        : main3.cpp
+// Author      : Kristian
+// Version     :
+// Copyright   : Copyright-Jan-7-2016
+// Description : Hello World in C++, Ansi-style
+//============================================================================
 
 #include "Element.h"
 
