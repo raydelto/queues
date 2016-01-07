@@ -13,7 +13,7 @@ using namespace std;
 
 int main() {
 
-	string name = "(Kristian)I shouldn't be caught by the stack";
+	string name = "[(Kristian)I shouldn't] be caught by the stack";
 	string holder;
 	Stack* stack = new Stack();
 
@@ -25,6 +25,26 @@ int main() {
 				Element* pieceHolder = new Element(holder);
 				stack->push(pieceHolder);
 				if (name[j] == ')') {
+					Element* k = stack->pop();
+					while(k != NULL) {
+						cout << k -> getName() << endl;
+						k = stack->pop();
+					}
+					cout << "I've Finished Successfully, Now Checking for [] Down!";
+				}
+			}
+		}
+	}
+
+	//This isn't catching exactly what I want it to, look into this for issues with the logic or the searching of the single lettered strings
+	for (int i = 0 ; i <= name.size() ; i++) {
+		if (name[i] == '[') {
+			for (int j = i; j < name.size() ; j++) {
+				holder = name[j];
+				cout << name[j] << endl;
+				Element* pieceHolder = new Element(holder);
+				stack->push(pieceHolder);
+				if (name[j] == ']') {
 					Element* k = stack->pop();
 					while(k != NULL) {
 						cout << k -> getName() << endl;
