@@ -5,27 +5,21 @@
  *      Author: raydelto
  */
 #include <iostream>
-#include "Queue.h"
+#include "Parser.h"
+#include <string>
 using namespace std;
 int main()
 {
-	Element* jules = new Element("Jules");
-	Element* susan = new Element("Susan");
-	Element* ray = new Element("Ray");
-	Element* mike = new Element("Mike");
-	Queue* queue = new Queue();
-	queue->enqueue(mike);
-	queue->enqueue(jules);
-	queue->enqueue(susan);
-	queue->enqueue(ray);
-
-
-	Element* i = queue->dequeue();
-	while(i != NULL)
+	Parser *parser = new Parser();
+	string expression;
+	cout << "Please enter the expression you'll like to parse: " << endl;
+	cin >> expression;
+	if(parser ->parse(expression) == true)
 	{
-		cout << i -> getName() << endl;
-		i = queue->dequeue();
+		cout << expression << " is a valid expression" << endl;
+	}else
+	{
+		cout << expression << " is NOT a valid expression" << endl;
 	}
-
-
+	return 0;
 }

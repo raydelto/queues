@@ -8,17 +8,16 @@
 #ifndef QUEUE_H_
 #define QUEUE_H_
 #include "Element.h"
-class Queue
+class Stack
 {
 private:
-	Element* _first;
 	Element* _last;
 
 public:
-	void enqueue(Element* element);
-	Element* dequeue();
-	Queue();
-	virtual ~Queue();
+	void push(Element* element);
+	Element* pop();
+	Stack();
+	virtual ~Stack();
 };
 
 #endif /* QUEUE_H_ */
